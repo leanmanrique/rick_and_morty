@@ -1,0 +1,83 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../../public/c7b45f6a-4816-4311-809d-d957b7e7c7dc.png");
+  background-position: center;
+  width: fit-content;
+  border: 3px solid black;
+  border-radius: 30px;
+  padding: 16px;
+  box-shadow: -10px 10px 5px 0px rgba(0, 0, 0, 090);
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.cardContainer:hover {
+  transform: scale(1.05);
+}
+
+.atributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  font-size: small;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.closeButton {
+  opacity: 0.7;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: fit-content;
+  height: fit-content;
+  background-color: red;
+}
+
+.closeButton:hover {
+  background-color: black;
+  color: lightblue;
+}
+
+.name {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out; /* Animation to fade in */
+  -ms-transition: all 0.3s ease-in-out; /* Animation to fade in */
+  transition: all 0.3s ease-in-out; /* Animation to fade in */
+}
+
+.imageContainer {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.characterImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s ease-in-out; /* Animation to fade in */
+  -ms-transition: all 0.3s ease-in-out; /* Animation to fade in */
+  transition: all 0.3s ease-in-out;
+}
+
+.imageContainer:hover .characterImage {
+  opacity: 0.4;
+}
+
+.imageContainer:hover .name {
+  opacity: 1;
+}
